@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Segunda Aplicacion</title>
+      <!--grupo CSS-->
+    <link rel="stylesheet" href="css/app2.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+    <!--grupo javascript-->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/acciones.js"></script>
+    <script src="phonegap.js" type="text/javascript"></script>
+    <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+    </script>
+  </head>
+  
+  <body onLoad="MM_preloadImages('imagenes/imagen4-1.png','imagenes/imagen4-2.png','imagenes/imagen4-3.png','imagenes/imagen4-4.png','imagenes/imagen4-5.png')">
+    <div data-role="page" id="Principal" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Semana Santa</h1>
+      </div>
+      
+      <div data-role="main" class="ui-content">
+      
+        <div>
+          <center>
+            <img src="imagenes/Titulo.png" width="470" height="336">
+          </center>
+        </div>
+        
+        <!--<div data-role="collapsible" data-content-theme="false">
+        </div>-->
+      </div>
+      
+      <div>
+        <ul data-role="listview" data-theme="a"	class="ui-lasview ui-group-theme-b">
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Significado De La Semana Santa.</h2>
+              <p> Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Domingo De Pascua.</h2>
+              <p> Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>¿Como Se Establece La Fecha Cada Año?</h2>
+              <p>Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Celebracion De La Semana Santa En Atlixco, Puebla. </h2>
+              <p> Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Celebracion De La Semana Santa En La Delegación Iztapalapa CDMX</h2>
+              <p>Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Celebracion De La Semana Santa En El Vaticano</h2>
+              <p>Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Celebracion De La Semana Santa En Jerusalem</h2>
+              <p>Ver Mas..</p>
+            </a>
+          </li>
+          
+          <li class="ui-first-child ui-last-child">
+            <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2>Celebracion De La Semana Santa En Taxco</h2>
+              <p>Ver Mas..</p>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div data-role="footer" align="center" data-theme="a">
+        <div>
+          <img src="imagenes/persona_azul.png" width="46" height="46">
+        </div>
+        <div>
+          <h4>Aplicacion Dos</h4>
+          <h4>Jordan Vazquez Garcia</h4>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  
+  <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+        <h1>Significado De La Semana Santa.</h1>
+      </div>
+      <div data-role="content" align="center">
+        <div>
+          <h3><b>Qué es Semana Santa</b></h3>
+          <p>Semana Santa, conocida como semana mayor, es un período de 7 días que comienza con el Domingo de Ramos y culmina con el Domingo de Resurrección. Con la Semana Santa, el cristiano conmemora el Triduo Pascual, es decir, los momentos de la Pasión, la Muerte y la Resurrección de Jesucristo.</p>
+          <img src="imagenes/imagen1-1.png">
+          <p>La Semana Santa está precedida por la Cuaresma que se refiere al tiempo de preparación donde se recuerda los 40 días de Jesucristo en el desierto. Las celebraciones centrales de la Semana Santa son: <i>Jueves Santo, Viernes Santo, Sábado Santo y Domingo de Resurrección.</i></p>
+          <p>La Semana Santa, es el tiempo para dedicarse a la oración y reflexionar en Jesucristo, en los momentos del Triduo Pascual, quien con su infinita misericordia, decide tomar el lugar del hombre y recibir el castigo para liberarlo de los pecados. Asimismo, es el tiempo ideal para el ser humano meditar sobre sus acciones y los cambios que debe realizar para acercarse más a Dios y cumplir con sus mandamientos.</p>
+          <p>Durante la Semana Santa, el católico cumple con diversos actos, como: procesiones, escenificación del drama de la muerte y pasión de Cristo. Los penitentes se someten a duras cargas como símbolo de su auto sacrificio y, en el día Viernes Santo, los fieles deben de guardar ayuno y abstenerse de comer carne.</p>
+          <b>Jueves Santo</b>
+          <div>
+            <img src="imagenes/imagen1-2.png">
+            <p>Como tal, el Jueves Santo celebra la última cena de Jesús de Nazaret con sus discípulos, la institución de la eucaristía, la orden sacerdotal y, el lavatorio de pies. En este día, los católicos realizan la visita de los siete templos o iglesias, con el objetivo de agradecer a Dios el don de la eucaristía y sacerdocio.</p>
+            <p>Para más información, visite el artículo de Jueves Santo.</p>
+          </div>
+           
+          <b>Viernes Santo</b>
+          <div>
+            <img src="imagenes/imagen1-3.png">
+            <p>El Viernes Santo, recuerda la Pasión de Cristo, momento de su crucifixión en el Calvario, por salvar al hombre del pecado y darle vida entera. Se celebra con un viacrucis y con la adoración de la Cruz.</p>
+            <p>Para más información, revise el artículo de Viernes Santo.</p>
+          </div>
+          
+          <b>Sábado Santo</b>
+          <div>
+            <img src="imagenes/imagen1-4.png">  
+            <p>Se conoce como Sábado Santo el día entre la muerte y la resurrección de Jesús. En este día, se lleva a cabo una vigilia pascual, en la cual se acostumbra bendecir el agua y encender las velas en señal de la Resurrección de Jesús.</p>
+          </div>
+          
+          <b>Domingo Santo</b>
+          <div>
+          <img src="imagenes/imagen1-5.png">
+          <p>El Domingo Santo, conocido como Domingo de Pascua. En el Domingo Santo, se conmemora la resurrección de Jesucristo al tercer día después de su crucifixión y, su primera aparición a los discípulos. Este día es de suma alegría para los fieles y, es interpretado como la esperanza de una nueva vida.</p>
+          </div>
+          
+          <div data-role="collapsible" data-content-theme="false">
+          <h1>Ver mas</h1>
+          <a href="#Pagina2" class="ui-btn-icon-right ui-icon-carat-r">
+          <p>Vea también Pascua.</p>   
+          </a> 
+        </div>
+                
+        </div>
+      </div>
+      <div data-role="footer" data-theme="a">
+        <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+      </div>
+      </div>
+    
+  <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Domingo De Pascua.</h1>
+        </div>
+        <div data-role="content" align="center">
+          <div>
+          	<b>Qué es Pascua:</b>
+            <div data-role="collapsible" data-content-theme="false">
+            	<h1>Imagen</h1>
+            	<img src="imagenes/imagen2-1.png">
+            </div>
+            
+            <p>Pascua es la celebración más importante de la Iglesia Cristiana, donde se conmemora la Resurrección de Jesucristo al tercer día después de haber sido crucificado, según los evangelios canónicos. El término Pascua proviene del latín "páscae", que a su vez proviene del griego "πάσχα" (pasjua), una adaptación del hebreo "פסח" (pésaj), que significa "paso" o "salto".</p>
+            <p>	La Pascua forma parte de la Semana Santa donde en el "Viernes Santo" se celebra la crucifixión de Jesús, y en el "Domingo de Pascua" se celebra la Resurrección y su primera aparición a sus discípulos. </p>
+            <p>El "Domingo de Pascua" es una fiesta móvil, el día varía cada año y no se fija en relación al calendario civil, y sucede después de la primera luna llena en el inicio de la primavera en el hemisferio Norte. La Pascua siempre se celebra entre el 22 de Marzo y el 25 de Abril, se celebra en varios países y en cada uno posee un nombre diferente, como por ejemplo: los portugueses la llaman Páscoa, los italianos la llaman Pasqua, y los franceses Pâques.</p>
+            <p>	El término de Pascua remite principalmente a la fiesta de la Resurrección, que también es llamada a veces Pascua florida, pero también se usa para referirse a otras tres celebraciones cristianas: la Navidad (25 de Diciembre), la Epifanía o Adoración de los Magos (6 de Enero) y Pentecostés, la venida del Espíritu Santo (cincuenta días después de la Resurrección).</p>
+            <p>Los primeros cristianos, que eran judíos, celebraban la Pascua de Resurrección a la par cronológica que la Pascua judía, hasta que en el Primer Concilio de Nicea (en el 325 d. C.) se separó la celebración de la Pascua judía de la cristiana, quitando a esta los elementos hebreos pero dejaron el carácter móvil de la fiesta recordando que Cristo resucitó en la Pascua hebrea.</p>
+            <p>	Según las Sagradas Escrituras, Dios ha dado a los cristianos "un nuevo nacimiento a una esperanza viva por la resurrección de Jesucristo de entre los muertos". Los cristianos, por la fe en el poder de Dios, han de discernir espiritualmente con Jesús resucitado cómo se puede caminar en una nueva forma de vida.</p>
+            <p>La expresión "¡Felices Pascuas!" es una forma tradicional de felicitar la Navidad, el nacimiento de Jesucristo.</p>
+            <b>Símbolos de la Pascua</b>
+            <p>	Uno de los símbolos de la Pascua es el conejo. Este animal se convirtió en un símbolo porque en la antigüedad, en el hemisferio Norte, la celebración fue precisamente a finales del invierno y principios de la primavera, cuando los animales aparecían en los campos con sus cachorros, era la época de la fertilidad.</p>
+            <p>El huevo también es un símbolo de la Pascua, representa el inicio de la vida. En varios países se regalan huevos de chocolate a los amigos, deseándoles un buen paso hacia una vida feliz.</p>
+            
+
+            
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>¿Como Se Establece La Fecha Cada Año?</h1>
+        </div>
+        <div data-role="content" align="center">
+        <div data-role="collapsible" data-content-theme="false">
+       	  <h1>Imagen</h1>
+          <img src="imagenes/imagen3-1.png">
+        </div>
+          <div>
+            <p>La Semana Santa es un tiempo que cambia según el año. No ocurre lo mismo con otras fiestas cristianas como la Navidad (25 diciembre), o las natividades de la Virgen María (8 septiembre) o de Juan el Bautista (24 junio) y de otras importantes fiestas de nuestra fe. ¿Por qué en la Semana Santa ocurre este cambio de fechas?<br>
+              <br>
+            Todo el calendario cristiano tiene su origen en la Resurrección de Jesús. La Resurección del Señor es la referencia más importante de nuestra fe. Tanto es así que durante los tres primeros siglos del cristianismo la única fiesta que realmente se celebraba era la Pascua de Resurrección (la gloriosa resurrección de Cristo), y en menor medida Pentecostés (el descenso del Espíritu Santo sobre los apóstoles). Con el paso del tiempo ese acontecimiento fundante de la Resurrección se fue ampliando alrededor de la Semana Santa, así apareció el domingo (la palabra domingo significa "El día del Señor"). Cada domingo es la celebración semanal del misterio pascual de la Resurrección de Cristo. Podemos decir que cada domingo es una mini-Pascua de Resurrección. De la misma manera se fue creando un calendario de fiestas cristianas donde podemos celebrar los distintos momentos de la vida de Jesús y de los santos y santas, pero todo el calendario litúrgico tuvo su origen en la fiesta de la Pascua de Resurrección de Jesús.</p>
+            
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Celebracion De La Semana Santa En Atlixco, Puebla. </h1>
+        </div>
+        <div data-role="content" align="left">
+          <div>
+            <p> Vía Crucis de Atlixco, en el estado de Puebla, en México, reúne desde hace más de un siglo en Semana Santa a un grupo de penitentes capaces de traspasar el umbral del dolor por su devoción, al salir en procesión encapuchados y descalzos, con grilletes y coronas de espinas.</p>
+            <p>Atlixco, un municipio situado a 30 minutos de Puebla capital y que fue nombrado recientemente Pueblo Mágico, acogió este viernes la llamada procesión de los Engrillados, que se celebra cada Viernes Santo en medio de gran expectación.</p>
+            <p>Las principales calles de este municipio situado a unos 150 kilómetros por carretera de la capital mexicana, se cubren con alfombras decorativas elaboradas con serrín de colores en un recorrido de cinco kilómetros que comienza en el Exconvento de San Francisco.</p>
+            <p>Con un paso lento y quejumbroso, cientos de hombres semidesnudos y encadenados caminan en busca del perdón divino a través del dolor.</p>
+            <p>“Es la fe, la devoción que tenemos para salir y para que este año nos vaya bien a nosotros y a la familia, una obra de agradecimiento”, describe un engrillado a Efe los motivos que le llevan a salir cada año en la procesión.</p>
+            <p>Bajo el anonimato, el devoto confiesa que lleva un lustro participando y que lo hace con orgullo por todos los favores que el Señor le ha dado.</p>
+            <p>En otros casos, se agradece la cura de algún familiar que padecía una grave enfermedad.</p>
+            <p>“Mi papá tuvo una operación y el doctor dijo que, una de dos, o se iba o se quedaba, y vine a prometer que iba a salir tres años de engrillado”, comenta otro participante que también prefiere reservar su identidad.</p>
+            <p>Señala que la preparación es fundamental para poder afrontar esta penitencia.</p>
+            <p>Físicamente, salen a correr y hacen pesas los meses previos a la procesión. Espiritualmente, reciben preparación a través de encuentros, pláticas y lecturas de la Sagrada Escritura.</p>
+            <p>Sin embargo, no todos aguantan este sacrificio. “He visto a compañeros que se desmayan, les tienen que quitar las cadenas porque no aguantan, voluntarios de la Cruz Roja se los tienen que llevar”, relata otro engrillado.</p>
+            <p>“La preparación es más que nada espiritual; se necesita tener mucha fe, es algo que no se puede describir; es dolor, cansancio, pero no se compara lo que sufrimos nosotros a lo que sufrió Jesús“, señala el joven.</p>
+            <p>Arrastran pesadas cadenas, que a veces superan los 100 kilos, con la cara tapada y una corona de espinas.</p>
+            <p>En el pecho, los brazos, las piernas y en la espalda se clavan más espinas que una semana antes van a buscar descalzos a un cerro cercano, señala administradora del Exconvento de San Francisco, Judith Sánchez del Razo.</p>
+            <p>atlixco<br>
+              En sus manos cargan una bandeja con limones, lo único que toman durante todo el recorrido para evitar la deshidratación.</p>
+            <p>Caminan bajo la atenta mirada de fieles y miles de visitantes de diferentes partes de México.</p>
+            <p>A su lado, dos personas caminan para auxiliarlos en caso de emergencia y como apoyo para acomodarse las cadenas e hidratarse.</p>
+            <p>“Es emocionante ver esto, en ellos se reflejan los pecados que uno comete” declara la atlixquense Rosa María, que cada año acude a ver la procesión.</p>
+            <p>El arrastre de las cadenas y los rezos de los engrillados son los únicos sonidos que se escuchan durante todo el recorrido.</p>
+            <p>“La fe es lo que los mueve a ellos a salir”, indica a Efe Alicia Garcés, representante de los engrillados de Atlixco.</p>
+            <p>“Hay personas que llevan más de cincuenta años saliendo y dicen que van a salir hasta que Dios se lo permita”, añade.</p>
+            <p>La mayoría son originarios de ese municipio poblano, aunque cada año llegan más participantes de diferentes partes del país como Matamoros, Tlaxcala o Guadalajara, e incluso desde Estados Unidos, en este último caso para cumplir con su penitencia tras vivir el sueño americano.</p>
+            <p>La tradición, según el padre Fernando, sacerdote de la Arquidiócesis de Puebla y párroco de Atlixco, está marcada en las sagradas escrituras.</p>
+            <p>“En la Biblia se relata que cuando el pueblo había pecado había personas que hacían prácticas penitenciarias; durante algunos días ofrecían estas prácticas para que perdonaran al pueblo, estas tradiciones se han extendido en el pueblo hispanoamericano”, narra.</p>
+            <p>&nbsp;</p>
+            
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+          </div>
+          <div data-role="collapsible" data-content-theme="false">
+            <h1>Imagenes</h1>
+            	<p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','imagenes/imagen4-1.png',1)"><img src="imagenes/Titulo.png" alt="" width="470" height="258" id="Image10"></a> </p>
+            <p>&nbsp;</p>
+            <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','imagenes/imagen4-2.png',1)"><img src="imagenes/Titulo.png" alt="" width="470" height="258" id="Image11"></a></p>
+            <p>&nbsp;</p>
+            <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','imagenes/imagen4-3.png',1)"><img src="imagenes/Titulo.png" alt="" width="470" height="258" id="Image12"></a></p>
+            <p>&nbsp;</p>
+            <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','imagenes/imagen4-4.png',1)"><img src="imagenes/Titulo.png" alt="" width="470" height="258" id="Image13"></a></p>
+            <p>&nbsp;</p>
+            <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','imagenes/imagen4-5.png',1)"><img src="imagenes/Titulo.png" alt="" width="470" height="258" id="Image14"></a></p>
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Celebracion De La Semana Santa En La Delegación Iztapalapa CDMX</h1>
+        </div>
+        <div data-role="content" align="center">
+          <div>
+            <p><img src="imagenes/imagen5-1.png"></p>
+            <p>Ariel Rodrigo Estrella, trabajador de una fábrica, y Bianibeeu Othadewi Madrid, estudiante de Medicina en la UNAM, encarnarán a los personajes principales durante la 173 Representación de la Pasión de Cristo en Iztapalapa.</p>
+            <p>Los protagonistas, los 450 extras y el resto del reparto que interpretará a 145 personajes que participan en la representación reconocida como Patrimonio Cultural Intangible de la Ciudad de México fueron elegidos por el Consejo Organizador de Semana Santa en Iztapalapa Asociación Civil (Cossiac).</p>
+            <p><br>
+            <img src="imagenes/imagen5-2.png">            </p>
+            <p>&nbsp;</p>
+            <p>Othadewi Madrid, de 19 años de edad, vive en el Barrio de San Pablo y representará a la Virgen María.</p>
+            <p><img src="imagenes/imagen5-3.png" width="399" height="714">            </p>
+            <p>El papel de Cristo será interpretado por Ariel Rodrigo Estrella, de 18 años, del Barrio de San José, quien a partir del domingo y hasta el Sábado de Gloria recibirá una preparación física y espiritual, informó la delegación Iztapalapa en un comunicado.<br>
+            </p>
+            <p>Para ofrecer una buena actuación a partir del próximo domingo el elenco se reunirá, como desde hace 70 años, en la “La casa de los ensayos” ubicada en cerrada de Aztecas 7, Barrio de La Asunción.</p>
+            <p>La delegación Iztapalapa, a su vez, inició las reuniones de planeación para garantizar la seguridad tanto de los actores como de los miles de asistentes que suelen acudir a la tradicional representación.</p>
+            <p>Las actividades oficiales comenzarán el 20 de marzo, Domingo de Ramos, con la procesión y la bendición de las palmas.</p>
+            <p>Continuarán el Jueves Santo en el Jardín Cuitláhuac, el Viernes Santo con la secuencia de la sentencia, los azotes, la coronación de espinas y el Vía Crucis, que culmina en el Cerro de la Estrella con la crucifixión, para concluir el Sábado de Gloria con la escenificación de la resurrección de Cristo.</p>
+            <p>La delegación se encargará del operativo vial por donde pasarán las procesiones y de la seguridad de las multitudes que se concentran en las calles, las plazas y los jardines.</p>
+            <p>EI Cossiac, en tanto, estará a cargo de los escenarios y la coordinación de los movimientos de los personajes en los diferentes lugares donde hay representaciones.</p>
+            <p>&nbsp;</p>
+            <p>	</p>
+            <p>	</p>
+            <p>	</p>
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Celebracion De La Semana Santa En El Vaticano</h1>
+        </div>
+        <div data-role="content" align="center">
+          <div>
+            <img src="imagenes/imagen6-2.png">
+            <p>La Semana Santa en Roma es un período del año lleno de eventos y propuestas, tanto para los que viajéis a Roma siendo cristianos como no. Los peregrinos que se acercan a San Pedro podrán vivir las celebraciones religiosas con el Papa, o en el marco maravilloso de las principales basílicas de la ciudad. En Santa Maria Maggiore, por ejemplo, tanto por su historia como por su belleza, podría ser un lugar muy especial para vivir el tríduo Pascual.</p>
+            <p>En la iglesia de Santiago y Monserrat, la iglesia Nacional española en via di Monserrato, pero también en otras iglesias de lengua española como la iglesia Nacional Argentina en Piazza Buenos Aires, podréis participar en las celebraciones en español.</p>
+            <p>Via Crucis Coliseo Roma</p>
+            <img src="imagenes/imagen6-1.png">
+            <p>Al no existir en la actualidad ninguna procesión por las calles de la ciudad, los momentos más populares y al abierto son la celebración del Domingo de Ramos en Piazza San Pietro, el via Crucis en el Coliseo y la bendición Urbi et Orbi el domingo de Pascua.</p>
+            <img src="imagenes/imagen6-3.png">
+            <p>El lunes de Pascua llamado 'dell'angelo', es un día muy especial, de descanso y para salir de la ciudad para disfrutar de una comida en familia, especialmente en la campiña en torno a Roma.</p>
+            <p>Los huevos, también de chocolate, los roscones de Pascua o la 'colomba', la torta de queso o 'pizza di Pasqua' y el cordero no faltan en las mesas durante las celebraciones pascuales. Es el momento también para suculentos platos con espárragos silvestres y alcachofas.</p>
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Celebracion De La Semana Santa En Jerusalem</h1>
+        </div>
+        <div data-role="content" align="center">
+          <div>
+            <h1>Semana Santa y Pascua en Jerusalén</h1>
+            <div id="node-1421">
+              <div>
+                <div>
+                  <select name="select" onchange="location = this.value">
+                    <option value="/taxonomy/term/29">Events</option>
+                     
+                  </select>
+                </div>
+              </div>
+              <div>
+                <img src="imagenes/imagen7-1.png">
+                <p>El periodo de la Cuaresma está llegando a su fin y tanto los cristianos locales como los miles de peregrinos que han acudido a la Ciudad Santa se están preparando para celebrar Semana Santa y su culminación en el Domingo de Resurrección, la fecha de mayor importancia del año litúrgico cristiano.</p>
+                <p>No hay nada como vivir la Semana Santa en Jerusalén.  Celebrar los grandes eventos de la historia de salvación y de la vida de Jesús en los mismos lugares en los que ocurrieron es una experiencia de fe conmovedora e inolvidable para todos los creyentes.</p>
+                <p>Oficialmente, Semana Santa comienza al conmemorarse la entrada de Jesús en Jerusalén el Domingo de Ramos (1 de abril), con la misa matinal de las 8 en la Iglesia del Santo Sepulcro y la tradicional procesión de Palmas durante la tarde. Más tarde, a las 14.30, miles de cristianos de todo el mundo marcharán jubilosamente desde Betfagé, rezando y cantando en todos los idiomas, descendiendo por la ladera occidental del Monte de los Olivos en camino a la Ciudad Vieja, a través del valle de Kidrón.</p>
+                <p>El Jueves Santo, el Patriarca Latino de Jerusalén celebrará a las 8 de la mañana la Institución de la Eucaristía en el Santo Sepulcro y por la tarde, a las 15.30, los Franciscanos efectuarán su peregrinación tradicional al Cenáculo (la Sala Superior) en el Monte Sion. Por la noche, a partir de las 21 horas, peregrinos y cristianos locales velarán con Jesucristo durante una hora sagrada de meditación en el Huerto de Getsemaní, seguida de una procesión a la luz de velas a la iglesia de San Pedro en Gallicantu, que según la tradición es el lugar en el que Jesús pasó la noche después de ser arrestado.</p>
+                <p>En Viernes Santo, a las 8 de la mañana, se conmemorarán la Pasión del Señor y la crucifixión en el Calvario, seguidas del Vía Crucis en la Vía Dolorosa a las 11.30, liderado por el Custos (Custodio) franciscano de Tierra Santa.  Posteriormente, a las 8.10 de la mañana, se celebrará el funeral de Cristo en el Sepulcro, un evento exclusivo de la Iglesia de Jerusalén, que reconstruye la deposición del cuerpo de Cristo en la tumba.</p>
+                <p>La tan esperada Vigilia Pascual, el punto culminante de la semana, se celebrará el sábado a las 7.30 de la mañana en la Basílica de la Resurrección, seguida de la entrada solemne del Patriarca a las 15.30 y e oficios religiosos vespertinos a las 18 horas.</p>
+                <p>El Domingo de Resurrección, se celebrará una misa a las 8 de la mañana, con una procesión alrededor de la tumba de Jesús y la procesión diaria, que tendrá lugar a las 17 horas.</p>
+                <p>Finalmente, el Lunes de Pascua, se conmemorará el encuentro de Jesús con los dos discípulos en el camino a Emaús, con la celebración de una misa en el Santo Sepulcro a las 8 de la mañana y también otra oficiada por el Custos (Custodio) en Emaús a las 10.</p>
+              </div>
+            </div>
+            
+            <p><img src="imagenes/imagen7-2.png">
+              
+              <img src="imagenes/imagen7-3.png"></p>
+
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>
+      
+  <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+        <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+          <h1>Celebracion De La Semana Santa En Taxco</h1>
+        </div>
+        <div data-role="content" align="center">
+          <div>
+            <p><img src="imagenes/imagen8-1.png">Uno de los atractivos turísticos más importantes que tiene el estado de Guerrero es la celebración de la Semana Santa en Taxco, ceremonia litúrgica conmovedora e impresionante, única en toda la República Mexicana. Parte fundamental en su desarrollo lo constituyen las dramáticas procesiones donde las imágenes religiosas son acompañadas, a lo largo de las empedradas calles de la ciudad, por cofradías de penitentes encapuchados, vestidos de negro y arrastrando cadenas que llevan sujetas a sus tobillos.</p>
+            <p>El inicio de esta tradición, debida a la gran religiosidad profesada por los habitantes de este pueblo minero, data, según los cronistas, de 1598, aunque en los archivos de la parroquia de Santa Prisca y San Sebastián se encuentran los registros de los primeros permisos otorgados por la Iglesia para celebrar una procesión del Cristo del Santo Entierro, en 1600. Esta celebración, que continúa hasta la fecha, se lleva a cabo, según lo marque el calendario católico, en el mes de marzo o abril, de acuerdo con el edicto del Concilio de Nicea, que en 325 estableció que la Pascua o Domingo de Resurrección se realizara el primer domingo que sigue a la luna llena que aparece después del equinoccio de primavera.</p>
+            <p>Desde 40 días previos a la Semana Mayor, se realizan ceremonias con motivo de los Seis Viernes de Cuaresma, correspondiendo a cada parroquia un día: el primer viernes a Tecalpulco; el segundo, a Acamixtla; el tercero a Tehuilotepec y Taxco el Viejo; el cuarto a La Veracruz; el quinto, se lleva a cabo en Atzala; y, el sexto, en Paintla.</p>
+            <p>Comienza con el domingo llamado de Carnaval, fiesta profana que representa el desenfreno y despedida de los placeres de la carne; antiguamente se celebraba con gran entusiasmo por los jóvenes, quienes se daban cita en el parque Guerrero o en el jardín Borda y, en medio de una lluvia de cascarones pintados de colores y rellenos de confeti, bailaban amenizados por alguna orquesta local, mientras los mayores descansaban en las bancas, gozando de aquel ambiente lleno de júbilo. El lunes y martes se prosigue con el festejo; antes, en algunas casas se organizaban bailes de disfraces y obsequiaban refrescos, sangría, pastelitos, rosquillas, soletas y la llamada “fruta de horno”. Este ambiente provinciano no ha sido reemplazado del todo, pues se sigue festejando en las calles y jardines del lugar, agregándose ahora los diferentes antros, bares, discotecas y restaurantes, para todos los gustos, y<br>
+              que son muy concurridos, tanto por los visitantes, como por los lugareños.</p>
+            <p>El miércoles que sigue al Domingo de Carnaval es el de Ceniza, día en que propiamente inicia el tiempo cuaresmal. Los fieles locales acuden desde temprana hora a la iglesia, para que el sacerdote, con la ceniza de las reliquias quemadas, imponga el signo de la cruz en la frente y recuerde a cada persona el origen de nuestra humanidad: “polvo eres y en polvo te convertirás”. El precepto es que a partir de ese día y hasta terminar la cuaresma, los fieles deben abstenerse de comer carnes rojas, así como ayunar los miércoles y viernes de cada semana; esto último, así como evitar diversiones, visitas y ruidos en señal de respeto, que en tiempos pasados se cumplían rigurosamente, se ha perdido en aras de una sociedad cuyos valores están fincados en el consumismo y la diversión.</p>
+            <p>La gastronomía de esos días es rica, variada y abundante; tradicionalmente se preparan tortas de arroz, de papa, de ejotes, de habas, así como pescado fresco o seco, en sus diferentes variedades, huauzontles, flor de zompantle en chile rojo, chiles rellenos, calabacitas, nopales, y sin faltar los postres preparados con la sazón de antaño.</p>
+            <p>El Domingo de Ramos o de Pascua conmemora la entrada triunfal de Jesús a Jerusalén, entre una muchedumbre que lo aclama con ramas de olivo, palmas y flores; así comienza la Semana Mayor. Desde muy temprano, los fieles se concentran en el poblado de Tehuilotepec donde inician la procesión, organizándose para conducir, en andas, las imágenes representativas de la ceremonia de ese día, siendo la principal San Ramos o San Ramitos; en su recorrido visitan la capilla de San Martín de Porres, en el barrio del Chorrillo, el templo del exconvento de San Bernardino de Siena, hasta la parroquia de Santa Prisca y San Sebastián; ahí son recibidos por el sacerdote, los cantores y los monaguillos, quienes entonan los salmos y dan acceso a la procesión en medio de una aglomeración que porta ramos de laurel y palmas hermosamente entretejidas que son bendecidas por el cura.</p>
+            <p> </p>
+            <p><img src="imagenes/imagen8-2.png">A partir del Lunes Santo, los fieles inician una serie de procesiones que se verifican por las noches, partiendo de los<br>
+              demás templos de la ciudad o, incluso, de alguna población cercana; al son de las chirimías, caminan, con las imágenes de sus correspondientes capillas en andas, los empedrados callejones de Taxco, hasta llegar al sitio de reunión: la plazoleta del templo de San Nicolás Tolentino, para iniciar de ahí el tradicional recorrido, que es conocido como la Procesión de las Vírgenes, que son alrededor de 30; la imagen principal es la de la Natividad, que va<br>
+              hasta el final, mientras que, a la vanguardia, abriendo paso y protegiendo a las vírgenes impacta la imagen de San Miguel Arcángel; así, los fieles, emprenden la marcha graves y silenciosos, al constante toque de los tambores, llevando velas encendidas cuya cera al escurrir les va quemando las manos. Participan también mujeres penitentes que van descalzas y visten de blanco. Recorren el templo de la Santísima Trinidad, el de la Santa Veracruz, el exconvento de San Bernardino de Siena, la parroquia de Santa Prisca y San Sebastián, para regresar al punto de partida.</p>
+            <p> El Martes Santo corresponde a la Procesión de las Ánimas y encabeza San Nicolás Tolentino, una escultura de proporciones semejantes a un humano, vestido sólo con un faldón negro, descubierto del rostro y una aureola en  cabeza, crucifijo y rosario en mano, con evidentes muestras de flagelación y brotes de sangre en la espalda; en su mano, una disciplina que es una variante de fuete, pero con agudos punzones o clavos de acero; le siguen las<br>
+              Ánimas Benditas del Purgatorio, la Santísima Trinidad, así como las imágenes de los arcángeles San Rafael y San Gabriel; es la más concurrida, por participar en ella penitentes de uno y otro sexo, que van divididos en tres grupos: encruzados, flagelantes, y ánimas. Los hombres llevan el rostro cubierto con una capucha negra llamada capirote, que se ciñe por el exterior de la cintura con un lazo tejido con la crin de caballo, llamado cabestro, de 15 cm de ancho; van descalzos, arrastrando cadenas, y el torso descubierto; los encruzados cargan un rollo de 2.5 m de largo compuesto por 144 varas de zarzas con espinas, de un peso aproximado de 50 kg, lo amarran con el cabestro a sus brazos pasando por el cuello y entre la boca como mordaza, haciendo sangrar su cuello y espalda; los flagelantes cargan una cruz de madera de 3 por 2 m y 6 kg de peso, un rosario en una mano, y en la otra una disciplina hecha con crin de caballo y clavos con la que azotan sus espaldas, que lucen maceradas ysangrientas. Las mujeres van en otro grupo; cubiertas de negro y descalzas caminan c o m p l e t a m e n t e encorvadas llevando en los antebrazos un crucifijo de madera y un rosario; otras, velas o cirios encendidos en ambas manos, arrastran cadenas que les aprisionan manos y pies, produciendo un tenebroso sonido.</p>
+            <p>La identidad de estos participantes siempre permanece en secreto; lo hacen para cumplir una manda o promesa, expiar sus culpas, pedir por la salud y bienestar de algún familiar o de ellos mismos, pero nunca son improvisados, ya que deben registrarse, para ingresar, con un año de anticipación, tiempo en que practican diversos actos espirituales y asisten a pláticas que imparten los religiosos.</p>
+            <p>El Miércoles Santo se coloca una escenografía del “huerto de los olivos” en el atrio de la parroquia de Santa Prisca y San Sebastián, y los lugareños acuden con pájaros, loros y pericos en jaulas; hacia las 21.00 horas, sale la Procesión de La Santísima Trinidad desde el templo que lleva su nombre; es acompañada por los Apóstoles, el Cristo de los Plateros, San Judas Tadeo, Jesús El Buen Pastor, el Señor de la Misericordia, Santa Faustina Kowalska, Santa Cecilia, el Cristo del Coro, el Padre Jesús del exconvento de San Bernardino, entre otras imágenes de distintas capillas; años atrás, se acostumbraba llevar también al Señor del Calvario, pero su rápido deterioro obligó a los feligreses a desistir de ello. Por supuesto, también participan los penitentes antes mencionados.</p>
+            <p> </p>
+            <p>El Jueves Santo, la procesión parte de la comunidad de Xochula, presidida por el Cristo de ese lugar, hasta el templo de Santa Prisca y San Sebastián, que luce grandioso y solemne, en donde, toda la mañana, una imagen de Jesús permanece en el atrio adornado como el Huerto de Getsemaní; por la tarde, se lleva a cabo la simbólica ceremonia del Lavatorio, donde Jesús, representado por el sacerdote, lava los pies de sus discípulos y los invita a participar en la Última Cena, celebrándose así los Sacramentos de la Penitencia y la Sagrada Eucaristía. En el pórtico del templo se representa el Prendimiento, por actores locales, y se inicia la procesión que encabeza quien personifica a Judas Iscariote, seguido por Pedro, el pescador que busca a Jesús con un farolito encendido, y los soldados romanos. Se llega a la capilla de San Nicolás Tolentino, donde en una cárcel hecha para el propósito, se venera, toda la noche, al Divino Preso. A los lados, hay charolas con monedas benditas que los asistentes pueden tomar al dar su limosna. Por la noche, parte, del templo de La Santa Veracruz, la Procesión de los Cristos, seguidos por las hermandades de las Ánimas, encruzados y flagelantes. Recorren La Garita, Reforma, el exconvento de San Bernardino, el zócalo, y la Santísima, para llegar al templo de La Santa Veracruz.</p>
+            <p> <img src="imagenes/imagen8-3.png">El Viernes Santo se lee el Sermón de la Sentencia de Jesús a las 6.00 de la mañana; a las 11.00, se organiza la Procesión de las Tres Caídas, que parte del templo de San Nicolás. La imagen de Jesús con la cruz a cuestas es conducida por la Vía Dolorosa, entre cantidad de fieles, penitentes y los sayones, que van leyendo de tramo en tramo la sentencia de muerte, hasta llegar a la plaza Borda donde se escenifican las tres caídas; en su recorrido lo acompañan las imágenes de la Santísima Virgen, La Verónica y María Magdalena, los lugareños que representan a los soldados romanos, los encruzados, los penitentes, y un grupo numeroso de niños vestidos de angelitos. A las 13:00 horas Jesús es crucificado, a las 16:00 horas se procede al Descendimiento del Cuerpo Santo y se regresa al exconvento de San Bernardino de Siena, donde se presenta a Cristo crucificado, y a su lado los ladrones Dimas y Gestas. Más tarde, es bajado de la cruz y depositado en una urna de cristal para llevarlo en hombros durante la llamada Procesión<br>
+              del Santo Entierro; van, también, la Santísima Virgen de los Dolores, la Magdalena, San Juan Evangelista, San Pedro, y los imprescindibles penitentes; cantores entonan los salmos correspondientes. Luego de varias horas, vuelven nuevamente al exconvento de San Bernardino para llevar a cabo la liturgia del día y la ceremonia del Pésame. A la medianoche, se inicia la Procesión del Silencio, en la que sólo figuran las imágenes de la Santísima Virgen de los Dolores, San Pedro y devotos enlutados que marchan solemnemente, mismos que velarán, durante toda la noche, al Señor del Santo Entierro, en su ataúd de cristal.</p>
+            <p>En el Sábado de Gloria se solicita a los fieles que guarden, durante todo el día, un absoluto silencio, en señal de luto y tristeza por la muerte de Jesús. Por la noche, en la iglesia de Santa Prisca y San Sebastián, hay misa solemne de Vigilia Pascual; a las 00:00 horas se celebra la misa de Resurrección, donde aparece la imagen del Señor vestido con una túnica blanca y se abre la Gloria; los soldados romanos que permanecían en el atrio caen desmayados por el<br>
+              impacto. En esta celebración, se bendicen el agua y los aceites; al primer repique de las campanas, se queman los judas; también se reparten, a niños y jóvenes, en forma jocosa, jalones de orejas y golpecitos con el chicote, para recordarles que deben tener un buen comportamiento; en las capillas se obsequian ramas de mastuerzo, laurel y palmas benditas para usarlas como reliquias y quemarlas cuando se presenta alguna tormenta o calamidad. El Domingo de Resurrección es obligatorio asistir a misa, y los comerciantes que nuevamente venden carne obsequian a sus clientes bastones, banderitas, palomitas de zompantle y muchas curiosidades. Por la tarde, se lleva a cabo la Procesión de la Resurrección del Señor, que porta en su mano derecha un estandarte; le acompañan las imágenes de la Virgen María y San Miguel Arcángel; participan, además, las asociaciones católicas juveniles, y es la última de este tiempo cuaresmal.</p>
+            <p>En marzo de 2005 fueron instaladas en la parte posterior del antiguo exconvento de San Bernardino, sobre la calle principal, tres esculturas de bronce, tamaño natural, que representan a los penitentes que participan en las procesiones de la Semana Santa en Taxco. Una de ellas es una imagen de la hermandad de Las Ánimas; la otra, corresponde a un flagelado que carga una cruz al frente y lleva en la mano un cabestro (pequeño látigo adicionado con puntas de acero, con el que se azotan la espalda hasta hacerla sangrar), y la tercera, es un encruzado que carga un rollo de varas espinosas. Estas figuras constituyen un atractivo más para el turismo y son un homenaje a una tradición antiquísima, muy arraigada, que los taxqueños conservan con gran celo.</p>
+          </div>
+        </div>
+        <div data-role="footer" data-theme="a">
+          <h4> Aplicacion Dos, Jordan Vazquez Garcia</h4>	
+        </div>
+      </div>                           
+
+  
+</body>
+  </html>
